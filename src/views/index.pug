@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+	head
+		link(href='./style.css', rel='stylesheet')
+		link(href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet")
+		title Bulletin Board
+	body#index
+		br
+		br
+		div#form
+			br
+			h1 Bulletin Board Messsages
+			p Click <a href='/messages'> here </a> to go to messages.
+			form(method='POST' action='/submitMessage')
+				h2 Message Title:
+				input#title(minlength='5' maxlength='50' size='50' type='text' placeholder='message title' name='title' required)
+				br
+				h2 Your Message:
+				textarea(minlength='5' maxlength='200' rows="20" cols="50" name="body" placeholder="Share your message here" required)
+				br
+				button(type='submit' class='btn') Submit 
+			
+		

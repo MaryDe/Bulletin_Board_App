@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    link(href='/style.css', rel='stylesheet')
+    link(href="https://fonts.googleapis.com/css?family=Open Sans Condensed" rel="stylesheet")
+    title Bulletin Board
+  body#messages
+    div#home
+      br
+      a(href='/') Home
+      p Click home to go to post new message
+    div
+      if messages.length != 0
+          ul
+          each message in messages
+            .post
+               li= message.title
+               li= message.body
+      else
+        h1 No posts yet!
+    
