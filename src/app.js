@@ -23,7 +23,7 @@ client.connect();
 
 //render the homepage which is also the add messages form
 app.get ('/', (req,res) => {
-	res.render('index');
+	res.render('message');
 })
 
 //post request to add new messages to the database 
@@ -37,7 +37,7 @@ app.post ('/submitMessage', (req,res) => {
 });
 
 app.get ('/messages', (req,res) => {
-	client.query('select * from messeges', (err, result) => {
+	client.query('select * from messages', (err, result) => { // done it was because my table had a typo and there is data inside so i dont want to drop it. but i mange to rename the table without dropping which is good
 		console.log(result.rows);
 		if (err){
 			throw err;
