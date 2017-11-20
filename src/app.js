@@ -23,7 +23,7 @@ client.connect();
 
 //render the homepage which is also the add messages form
 app.get ('/', (req,res) => {
-	res.render('message');
+	res.render('index');
 })
 
 //post request to add new messages to the database 
